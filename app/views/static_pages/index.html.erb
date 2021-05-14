@@ -1,0 +1,9 @@
+<h3>Enter a user ID to retrieve their photographs from Flickr:</h3>
+
+<%= render 'user_id_form' %>
+
+<% unless @photos.nil? %>
+    <%= @photos.each do |p| %>
+        <img src="<%= Flickr.url_n(p) %>"/>
+    <% end %>
+<% end %>

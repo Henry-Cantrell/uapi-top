@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :staticpages
+  root'static_pages#index'
+
+  resources :static_pages
 end
